@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <script src="time.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      color: gray;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+     #mousemove {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 20px;
+      width: 20px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      z-index: -99999;
+    } 
+
+    #message-container {
+      width: 60%;
+      max-width: 1200px; 
+      margin-bottom: 80px;
+    } 
+
+    .left-message{ 
+      position: relative;
+      font-size: 20px;  
+      text-align: left;
+      border-bottom-left-radius: 5px;
+      padding-left: 15px;
+      border-left: 2px solid gray;   
+      }
+
+      .left-message span{
+        font-size: 17px;
+      }
+    
+    .left-message::before{
+      position: absolute;
+      content: "";
+      border-top: 2px solid gray;
+      border-left: 2px solid gray;
+      top: 1.5px;
+      left: -8px;
+      transform: rotate(-45deg);
+      height: 10px;  
+      width: 10px;
+      z-index: -1; 
+    }
+
+    .right-message{  
+      position: relative;
+      font-size: 20px;  
+      text-align: right;
+      border-bottom-right-radius: 5px;
+      padding-right: 15px; 
+      border-right: 2px solid gray; 
+    }
+    
+    .right-message::before{
+      position: absolute;
+      content: "";
+      border-top: 2px solid gray;
+      border-right: 2px solid gray;
+      top: 1.5px;
+      right: -8px;
+      transform: rotate(45deg);
+      height: 10px;  
+      width: 10px;
+      z-index: -1; 
+    } 
+    code{
+      font-size: 15px;
+    }
+    
+    #send-container { 
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input { 
+      flex-grow: 1;
+      font-size: 20px;
+      padding: 5px; 
+      border-top-left-radius: 5px; 
+      border-bottom-left-radius: 5px; 
+      border-right: none;
+      border: 2px solid #536dfe;
+      transition: all .3s linear;
+    }
+
+    #message-input:hover{
+      border: 2px solid rgb(122, 116, 116);
+    }
+
+     button {  
+      font-size: 20px; 
+      border-top-right-radius: 5px;  
+      border-bottom-right-radius: 5px; 
+      border: 2px solid #536dfe;
+      background: #539dfe;
+    } 
+  </style>
+</head>
+<body>
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input placeholder="Type a message" autocomplete="off" type="text" id="message-input">
+    <button type="submit" id="send-button">Send <i class="fa fa-chat"></i></button>
+  </form>
+</body>
+</html>
