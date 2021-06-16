@@ -1,132 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chat App</title>
-  <script defer src="soc.js"></script>
-  <script defer src="script.js"></script>
-  <script src="time.js"></script>
+  <title>Logo | Chat </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      color: gray;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-     #mousemove {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 20px;
-      width: 20px;
-      border: 1px solid transparent;
-      border-radius: 50%;
-      z-index: -99999;
-    } 
-
-    #message-container {
-      width: 60%;
-      max-width: 1200px; 
-      margin-bottom: 80px;
-    } 
-
-    .left-message{ 
-      position: relative;
-      font-size: 20px;  
-      text-align: left;
-      border-bottom-left-radius: 5px;
-      padding-left: 15px;
-      border-left: 2px solid gray;   
-      }
-
-      .left-message span{
-        font-size: 17px;
-      }
-    
-    .left-message::before{
-      position: absolute;
-      content: "";
-      border-top: 2px solid gray;
-      border-left: 2px solid gray;
-      top: 1.5px;
-      left: -8px;
-      transform: rotate(-45deg);
-      height: 10px;  
-      width: 10px;
-      z-index: -1; 
-    }
-
-    .right-message{  
-      position: relative;
-      font-size: 20px;  
-      text-align: right;
-      border-bottom-right-radius: 5px;
-      padding-right: 15px; 
-      border-right: 2px solid gray; 
-    }
-    
-    .right-message::before{
-      position: absolute;
-      content: "";
-      border-top: 2px solid gray;
-      border-right: 2px solid gray;
-      top: 1.5px;
-      right: -8px;
-      transform: rotate(45deg);
-      height: 10px;  
-      width: 10px;
-      z-index: -1; 
-    } 
-    code{
-      font-size: 15px;
-    }
-    
-    #send-container { 
-      position: fixed;
-      padding-bottom: 30px;
-      bottom: 0;
-      background-color: white;
-      max-width: 1200px;
-      width: 80%;
-      display: flex;
-    }
-
-    #message-input { 
-      flex-grow: 1;
-      font-size: 20px;
-      padding: 5px; 
-      border-top-left-radius: 5px; 
-      border-bottom-left-radius: 5px; 
-      border-right: none;
-      border: 2px solid #536dfe;
-      transition: all .3s linear;
-    }
-
-    #message-input:hover{
-      border: 2px solid rgb(122, 116, 116);
-    }
-
-     button {  
-      font-size: 20px; 
-      border-top-right-radius: 5px;  
-      border-bottom-right-radius: 5px; 
-      border: 2px solid #536dfe;
-      background: #539dfe;
-    } 
   </style>
 </head>
+
 <body>
-  <div id="message-container"></div>
-  <form id="send-container">
-    <input placeholder="Type a message" autocomplete="off" type="text" id="message-input">
-    <button type="submit" id="send-button">Send <i class="fa fa-chat"></i></button>
-  </form>
+
+  <div class="container">
+
+    <!-- All User Section -->
+    <div class="user_section">
+
+      <!-- user auth details  -->
+      <div class="profile">
+        <img src="image/1.jpg" alt="not found">
+        <span>
+          <p class="username">Gravid Cristofer &nbsp; <i class="fa fa-edit"></i></p>
+          <p>Senior Developer</p>
+        </span>
+      </div>
+
+
+      <!-- search bar here  -->
+      <div class="search_bar">
+        <form action="#" id="search_form">
+          <input type="text" placeholder="Search Friends">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+      <!-- all users section  -->
+      <!-- 1st user  -->
+      <div class="users_profile">
+        <img src="image/1.jpg" alt="not found">
+        <span>
+          <p class="username">Lina Roy &nbsp;<b>07:30 am</b></p>
+          <p>Then ok, lets meeting with client Tommorrow.</p>
+        </span>
+      </div>
+
+      <!-- 2nd user  -->
+      <div class="users_profile">
+        <img src="image/1.jpg" alt="not found">
+        <span>
+          <p class="username">Brad Frost &nbsp;<b>07:30 am</b></p>
+          <p>Nice to meet you!</p>
+        </span>
+      </div>
+
+      <!-- 3rd user  -->
+      <div class="users_profile">
+        <img src="image/1.jpg" alt="not found">
+        <span>
+          <p class="username">Paul Irish &nbsp;<b>07:30 am</b></p>
+          <p>That's Geat. then start working from Tommorrow.</p>
+        </span>
+      </div>
+
+
+
+    </div>
+
+    <!-- User Chatting Section  -->
+    <div class="chat_section">
+
+
+      <div class="chat_header">
+        <div class="img_name">
+          <img src="image/1.jpg" alt="not found">
+          <span>Dianne Vanhorn <b>.</b></span>
+        </div>
+        <div class="notify">
+          <i class="fa fa-search"></i>
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-bell"></i>
+        </div>
+      </div>
+
+      <i class="fa fa-user" id="show_users"></i>
+      <i class="fa fa-info-circle" id="user_details"></i>
+
+      <div id="chatBox">
+        <ul>
+          <li id="info">Tommorrow</li> 
+          <li id="receiver">Thst's Great</li>
+          <li id="sender">I am refer to the project structure and found some mistakes</li>
+          <li id="sender">There are some bug in that project.</li>
+          <li id="receiver">I see that project</li>
+          <li id="receiver">Yes there are many Bugs in that project</li>
+          <li id="info">Today</li> 
+          <li id="receiver">PDF file</li>
+          <li id="sender">Can you send me the Report?</li>
+        </ul>
+      </div>
+
+      <div class="input_feild">
+        <form action="#" id="chat_input">
+          <i class="fa fa-microphone"></i>
+          <input type="text" autofocus placeholder="Write Somthing">
+          <i class="fa fa-file"></i>
+          <i class="fa fa-camera"></i>
+          <i class="fa fa-user"></i>
+
+          <button type="submit">
+            <i class="fa fa-send"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+    <!-- User Chat Details Section  -->
+    <div class="details_section">
+
+      <!-- search bar here  -->
+      <div class="search_bar" style="margin: 20px 0px;">
+        <form action="#" id="search_form">
+          <input type="text" placeholder="Search People">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+
+      <!-- user profile details  -->
+      <div class="current_profile">
+        <img src="image/1.jpg" alt="">
+        <h2>Mohd Kamleen</h2>
+        <p>Software Engineer</p>
+      </div>
+
+      <!-- calling buttons feilds  -->
+      <div class="btn_call">
+        <div><button><i class="fa fa-comment"></i></button>
+          <p>Chat</p>
+        </div>
+        <div class="partition"></div>
+        <div><button><i class="fa fa-camera"></i></button>
+          <p>Video</p>
+        </div>
+      </div>
+
+
+      <!-- footer section other user details  -->
+      <div class="user_other_details">
+
+        <!-- friends veiw here  -->
+        <div class="veiw_friend">
+          <i class="fa fa-user"></i>
+          <span>View Friends</span>
+        </div>
+
+        <!-- save_favorite part here  -->
+        <div class="save_favorite">
+          <i class="fa fa-heart"></i>
+          <span>Add to Favorite</span>
+        </div>
+
+
+        <!-- atechment part here  -->
+        <div class="attechment">
+          <h4>Attechment</h4> <br><br>
+          <span>PDF</span>
+          <span>Video</span>
+          <span>Mp3</span>
+          <span>Image</span>
+        </div>
+
+
+        <!-- veiw all button part here  -->
+        <div class="view_all_media">
+          <button>View All</button>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var user = document.getElementById("show_users");
+    var details = document.getElementById("user_details");
+    var details_section = document.getElementsByClassName("details_section")[0];
+    var user_section = document.getElementsByClassName("user_section")[0];
+
+
+
+    // all users section going to be hide and show 
+    user.addEventListener("click", function () {
+      if (user_section.style.width == '500px') {
+        user_section.style.width = '0px';
+        user.classList.replace("fa-times", "fa-user");
+      } else {
+        user_section.style.width = '500px';
+        details_section.style.width = '0px';
+        details.classList.replace("fa-times", "fa-info-circle");
+        user.classList.replace("fa-user", "fa-times");
+      }
+    });
+
+
+    // user details section going to be hide and show 
+    details.addEventListener("click", function () {
+      if (details_section.style.width == '500px') {
+        details_section.style.width = '0px';
+        details.classList.replace("fa-times", "fa-info-circle");
+      } else {
+        details_section.style.width = '500px';
+        user_section.style.width = '0px'
+        details.classList.replace("fa-info-circle", "fa-times");
+        user.classList.replace("fa-times", "fa-user");
+      }
+    });
+  </script>
 </body>
+
 </html>

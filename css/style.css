@@ -1,0 +1,432 @@
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      outline: none;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .fa {
+      color: rgb(192, 192, 192);
+      font-size: 23px;
+    }
+
+    #show_users,
+    #user_details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      border: 1px solid rgb(179, 179, 179);
+      margin: 50vh 0px;
+      padding: 20px 15px;
+      border-radius: 5px;
+      transition: .1s all ease;
+      position: fixed;
+      z-index: 11;
+      background: #fff;
+    }
+
+    #show_users:hover,
+    #user_details:hover {
+      background: rgb(84, 138, 255);
+      color: #fff;
+    }
+
+    #show_users {
+      float: left;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-left: none;
+      left: 0;
+    }
+ 
+
+    #user_details {
+      float: right;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-right: none;
+      right: 0;
+    }
+
+
+    .user_section,
+    .details_section {
+      height: 100vh;
+      width: 0px;
+      background: rgb(248, 248, 248);
+      transition: all .3s linear;
+      overflow: hidden;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+    /* users section and user profile section or first section css  */
+
+    
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile img {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      margin: 20px;
+    }
+
+    .profile span .username {
+      font-weight: 700;
+      font-size: 23px;
+      color: rgb(84, 138, 255);
+    }
+
+    .search_bar {
+      width: 100%;
+      padding: 10px;
+    }
+
+    #search_form {
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      padding: 5px 10px;
+
+    }
+
+    #search_form input[type="text"] {
+      width: 90%;
+      font-size: 18px;
+      background: transparent;
+      border: none;
+    }
+
+    #search_form button {
+      font-size: 18px;
+      border: none;
+      background: transparent;
+    }
+
+
+    .users_profile {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .users_profile img {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      margin: 20px;
+    }
+
+    .users_profile span .username {
+      font-weight: 700;
+      font-size: 20px;
+      color: rgb(84, 138, 255);
+    }
+
+    .users_profile span .username b {
+      font-weight: lighter;
+      font-size: 15px;
+      color: rgb(134, 134, 134);
+    }
+
+
+
+
+
+
+
+    /* it is second section css where coding is chat box and other details  */
+
+    .chat_section {
+      height: 100vh;
+      width: 100%;
+      overflow: auto;
+      padding: 20px;
+      position: relative;
+    }
+
+    .chat_section::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .chat_header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      z-index: 999;
+      border-bottom: 1px solid rgb(214, 214, 214);
+    }
+
+    .chat_header .img_name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat_header .notify i {
+      margin: 0px 5px;
+    }
+
+    .chat_header .img_name span {
+      font-size: 25px;
+    }
+
+    .chat_header .img_name span b {
+      color: rgb(0, 196, 0);
+    }
+
+
+    .chat_header img {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      margin: 0px 20px 0px 0px;
+    }
+
+    #chatBox{
+      margin-top: 75px;
+    }
+
+    #chatBox ul li {
+      clear: both;
+      font-size: 18px;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin: 4px;
+      list-style: none;
+      font-weight: 200;
+    }
+
+
+    #chatBox ul li#sender {
+      float: right;
+      background: rgb(84, 138, 255);
+      color: #fff;
+      border-bottom-right-radius: 0px;
+      max-width: 250px;
+    }
+
+
+    #chatBox ul li#receiver {
+      float: left;
+      background: rgb(243, 243, 243);
+      border-bottom-left-radius: 0px;
+      max-width: 250px;
+    }
+
+    #chatBox ul li#info {
+      text-align: center;
+      font-size: 15px;
+      color: rgb(139, 139, 139);
+      position: relative;
+      border-radius: 0;
+      border-bottom: 1px solid rgb(202, 202, 202);
+    }
+
+
+    #chat_input {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 50px);
+      background: rgb(240, 240, 240);
+      padding: 10px;
+      border-radius: 100px;
+      margin: 20px;
+    }
+
+    #chat_input input[type="text"] {
+      border: none;
+      outline: none;
+      font-size: 20px;
+      width: 65%;
+      text-indent: 10px;
+      background: transparent;
+    }
+
+    #chat_input button[type="submit"] {
+      background: rgb(84, 138, 255);
+      border: none;
+      padding: 13px;
+      border-radius: 50px;
+      outline: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    #chat_input button[type="submit"] .fa-send {
+      color: #fff;
+    }
+
+    #chat_input .fa-user {
+      position: absolute;
+      right: 55px;
+    }
+
+    #chat_input .fa-file {
+      position: absolute;
+      right: 80px;
+    }
+
+    #chat_input .fa-camera {
+      position: absolute;
+      right: 110px;
+    }
+
+
+
+
+
+    /* here is user details section or 3rd section css code here */
+
+
+    .current_profile{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .current_profile img{
+      height: 150px; 
+      border-radius: 500px;
+    }
+    .current_profile h2{
+      color: rgb(124, 124, 124);
+      padding: 7px;
+      font-weight: 500;
+    }
+    .current_profile p{
+      color: rgb(136, 136, 136);
+      font-weight: 400;
+      font-size: 17px;
+    }
+
+    .btn_call{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .partition{
+      height: 120px;
+      border: 1px solid rgb(214, 214, 214);
+    }
+
+    .btn_call button{
+      background: rgb(84, 138, 255);
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+    }
+     
+    .btn_call button i{
+      color: #fff;
+    }
+
+    .btn_call p{
+      color: rgb(112, 112, 112);
+      font-weight: 400;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .veiw_friend, .save_favorite, .attechment {
+      padding: 5px 15px;
+      color: gray; 
+    }
+
+    .attechment span{
+      color: rgb(84, 138, 255);
+      background: rgb(189, 210, 255);
+      padding: 20px; 
+      border-radius: 5px;   
+    }
+
+    .view_all_media{
+      display: flex;
+      justify-content: center; 
+      margin: 40px;
+    }
+
+    .view_all_media button{
+      background: transparent;
+      border-radius: 50px;
+      border: 1px solid gray;
+      padding: 5px 10px;
+      color: rgb(84, 138, 255);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* in this section all possitive responsive css code  */
+
+
+    @media (min-width:1500px) {
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .user_section,
+      .details_section {
+        flex: 1;
+      }
+
+      .chat_section {
+        flex: 3;
+      }
+
+      #show_users,
+      #user_details {
+        display: none;
+      }
+
+    }
