@@ -91,13 +91,13 @@
 
       <div id="chatBox">
         <ul>
-          <li id="info">Tommorrow</li> 
+          <li id="info">Tommorrow</li>
           <li id="receiver">Thst's Great</li>
           <li id="sender">I am refer to the project structure and found some mistakes</li>
           <li id="sender">There are some bug in that project.</li>
           <li id="receiver">I see that project</li>
           <li id="receiver">Yes there are many Bugs in that project</li>
-          <li id="info">Today</li> 
+          <li id="info">Today</li>
           <li id="receiver">PDF file</li>
           <li id="sender">Can you send me the Report?</li>
         </ul>
@@ -185,42 +185,9 @@
     </div>
 
   </div>
+ 
 
-  <script>
-    var user = document.getElementById("show_users");
-    var details = document.getElementById("user_details");
-    var details_section = document.getElementsByClassName("details_section")[0];
-    var user_section = document.getElementsByClassName("user_section")[0];
-
-
-
-    // all users section going to be hide and show 
-    user.addEventListener("click", function () {
-      if (user_section.style.width == '500px') {
-        user_section.style.width = '0px';
-        user.classList.replace("fa-times", "fa-user");
-      } else {
-        user_section.style.width = '500px';
-        details_section.style.width = '0px';
-        details.classList.replace("fa-times", "fa-info-circle");
-        user.classList.replace("fa-user", "fa-times");
-      }
-    });
-
-
-    // user details section going to be hide and show 
-    details.addEventListener("click", function () {
-      if (details_section.style.width == '500px') {
-        details_section.style.width = '0px';
-        details.classList.replace("fa-times", "fa-info-circle");
-      } else {
-        details_section.style.width = '500px';
-        user_section.style.width = '0px'
-        details.classList.replace("fa-info-circle", "fa-times");
-        user.classList.replace("fa-times", "fa-user");
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
